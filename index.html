@@ -16,16 +16,17 @@
 
   <style>
     :root {
-      --text: #2b2622;
-      --muted: #7a6f64;
-      --link: #c2562d;
-      --accent: #c2562d;
-      --accent-dark: #a8431f;
-      --rule: #ece3d8;
-      --bg: #faf6f0;
-      --card: #fffdfa;
-      --chip: #f6e7dd;
-      --chip-hover: #efd6c5;
+      --text: #1f2a24;
+      --muted: #66736b;
+      --link: #2e6a4a;
+      --accent: #2e6a4a;
+      --accent-dark: #1f4f37;
+      --accent-2: #b8372b;          /* social-movements red */
+      --rule: #dde6da;
+      --bg: #f4f7f1;
+      --card: #fcfdfb;
+      --chip: #e2eee5;
+      --chip-hover: #cde0d3;
     }
 
     * { box-sizing: border-box; }
@@ -54,7 +55,7 @@
     }
 
     .navbar {
-      background: rgba(250, 246, 240, 0.85);
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
       backdrop-filter: saturate(180%) blur(10px);
       -webkit-backdrop-filter: saturate(180%) blur(10px);
       border-bottom: 1px solid var(--rule);
@@ -133,7 +134,7 @@
       color: var(--text);
       margin: 0 0 1.4rem;
       padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--accent);
+      border-bottom: 2px solid var(--accent-2);
       display: inline-block;
     }
 
@@ -164,7 +165,7 @@
       border: 1px solid var(--rule);
       border-radius: 16px;
       padding: 2.25rem;
-      box-shadow: 0 6px 24px rgba(74, 53, 38, 0.06);
+      box-shadow: 0 6px 24px rgba(31,58,43, 0.06);
     }
 
     #home .photo {
@@ -179,9 +180,9 @@
       border-radius: 50%;
       display: block;
       margin: 0 auto 1.1rem;
-      box-shadow: 0 4px 18px rgba(74, 53, 38, 0.18);
+      box-shadow: 0 4px 18px rgba(31,58,43, 0.18);
       border: 3px solid var(--card);
-      outline: 2px solid var(--accent);
+      outline: 2px solid var(--accent-2);
     }
 
     #home .intro {
@@ -417,6 +418,8 @@
     .timeline li { margin-bottom: 0.7rem; }
     .timeline .when { display: inline-block; min-width: 6.2rem; color: var(--muted); font-weight: 600; font-size: 0.9rem; }
     .edu-place { color: var(--muted); }
+    .nav-links a.active { box-shadow: 0 2px 0 var(--accent-2); }
+    .doc-btn.primary:hover { border-color: var(--accent-dark); }
   </style>
 </head>
 <body>
@@ -457,7 +460,7 @@
       </div>
 
       <div class="intro">
-        <p>I am a PhD candidate in Economics at the <a href="https://www.bse.u-bordeaux.fr/" target="_blank" rel="noopener">Bordeaux School of Economics</a> (University of Bordeaux) under the supervision of <a href="https://www.bse.u-bordeaux.fr/membres/eric-berr/" target="_blank" rel="noopener">Eric Berr</a> and <a href="https://www.u-bordeaux.fr/universite/espace-presse/repertoire-dexperts/sylvie-ferrari" target="_blank" rel="noopener">Sylvie Ferrari</a>, expected to graduate in 2027. My PhD focuses on the <strong>social acceptability of environmental policies</strong> in France. <p>
+        <p>I am a PhD candidate in Economics at the <a href="https://www.bse.u-bordeaux.fr/" target="_blank" rel="noopener">Bordeaux School of Economics</a> (University of Bordeaux) under the supervision of <a href="https://www.bse.u-bordeaux.fr/membres/eric-berr/" target="_blank" rel="noopener">Eric Berr</a> and <a href="https://www.u-bordeaux.fr/universite/espace-presse/repertoire-dexperts/sylvie-ferrari" target="_blank" rel="noopener">Sylvie Ferrari</a>, expected to graduate in 2027. My PhD focuses on the <strong>social acceptability of environmental policies</strong> in France.</p>
         <p>I combine an interdisciplinary framework with quasi-experimental methods to understand how distributive effects, trust in institutions and social movements shape the social acceptability of environmental policies, and the policy change conditions to raise social support for environmental policies.</p>
         <p class="fields">
           <span>Political Economy</span>
